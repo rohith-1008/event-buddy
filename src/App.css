@@ -1,38 +1,83 @@
 .App {
+  font-family: 'Poppins', Arial, sans-serif; /* Use Poppins, fallback to Arial */
   text-align: center;
+  margin-top: 20px;
+  background-color: #f4f7f6; /* Ensure consistent background for the whole app */
+  min-height: 100vh; /* Ensure app takes full height */
+  display: flex; /* Use flexbox for overall app layout */
+  flex-direction: column; /* Stack content vertically */
+  align-items: center; /* Center content horizontally */
+  padding-bottom: 50px; /* Space at bottom */
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+/* --- NEW: Styling for the main H1 title --- */
+.App h1 {
+  font-family: 'Poppins', sans-serif;
+  font-size: 3.5em; /* Larger font size */
+  font-weight: 700; /* Bolder */
+  color: #333; /* Darker text */
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1); /* Subtle text shadow */
+  margin-bottom: 30px; /* More space below title */
+  letter-spacing: 1px; /* Slightly spaced letters */
+  background: linear-gradient(90deg, #007bff, #0056b3); /* Subtle gradient background for text */
+  -webkit-background-clip: text; /* Clip background to text */
+  -webkit-text-fill-color: transparent; /* Make text transparent to show gradient */
+  animation: fadeInDown 1s ease-out; /* Add a subtle animation on load */
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
+/* --- NEW: Keyframe animation for title --- */
+@keyframes fadeInDown {
   from {
-    transform: rotate(0deg);
+    opacity: 0;
+    transform: translateY(-20px);
   }
   to {
-    transform: rotate(360deg);
+    opacity: 1;
+    transform: translateY(0);
   }
+}
+
+/* --- Existing .controls-container and .search-input (ensure these are present) --- */
+.controls-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 15px; /* Space between button and search input */
+  margin-bottom: 20px;
+  flex-wrap: wrap; /* Allow wrapping on smaller screens */
+}
+
+.add-event-button {
+  background-color: #007bff;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.2s ease, transform 0.1s ease;
+}
+
+.add-event-button:hover {
+  background-color: #0056b3;
+  transform: translateY(-1px);
+}
+
+.add-event-button:active {
+    transform: translateY(0);
+}
+
+.search-input {
+  padding: 10px 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  font-size: 1em;
+  width: 300px; /* Adjust width as needed */
+  max-width: 80%; /* Ensure it doesn't overflow on small screens */
+}
+
+.search-input:focus {
+  outline: none;
+  border-color: #007bff;
+  box-shadow: 0 0 0 3px rgba(0, 123, 255, 0.25);
 }
