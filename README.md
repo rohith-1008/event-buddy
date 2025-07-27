@@ -28,6 +28,20 @@ An intuitive and stylish event calendar and scheduling application built with Re
 
 Follow these steps to get a local copy of Event Buddy up and running on your machine.
 
+## 📸 Usage / Animated Demos
+
+### Smooth Title Entrance
+![Event Buddy Title Animation](https://raw.githubusercontent.com/rohith-1008/event-buddy/main/assets/images/title-animation.gif)
+
+### Event Form Pop-Up
+![Event Buddy Form Pop-Up](https://raw.githubusercontent.com/rohith-1008/event-buddy/main/assets/images/form-animation.gif)
+
+### Calendar Navigation & Event Display
+![Event Buddy Calendar Demo](https://raw.githubusercontent.com/rohith-1008/event-buddy/main/assets/images/calendar-demo.gif)
+
+### Custom Category Management
+![Event Buddy Category Management](https://raw.githubusercontent.com/rohith-1008/event-buddy/main/assets/images/category-manager.gif)
+
 ### **Prerequisites**
 
 Make sure you have Node.js and npm (Node Package Manager) installed on your system.
